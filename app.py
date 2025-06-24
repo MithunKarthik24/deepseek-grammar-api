@@ -25,7 +25,7 @@ def fix_grammar():
     }
 
     payload = {
-        "model": "deepseek-chat",
+        "model": "deepseek-ai/deepseek-chat",
         "messages": [
             {"role": "system", "content": "You are a helpful assistant that fixes grammar in English sentences."},
             {"role": "user", "content": f"Fix this sentence: {sentence}"}
