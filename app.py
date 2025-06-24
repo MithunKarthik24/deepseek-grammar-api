@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 API_KEY = os.getenv("OPENROUTER_API_KEY", "sk-or-your-api-key-here")  # Replace with your key or set env var
 
-@app.route("/fix", methods=["POST"])
+@app.route("/fix", methods=["GET"])
 def fix_grammar():
-    sentence = request.get_json().get("text", "")
+    sentence = request.args.get("text", "")
 
     headers = {
         "Authorization": f"Bearer {API_KEY}",
